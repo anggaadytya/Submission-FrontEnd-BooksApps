@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Bookshelf Apps</h1>
+      <form id="formCari">
+        <input type="text" id="search" placeholder="Search" name="search" />
+        <button type="submit" class="btn-seacrh">Search</button>
+      </form>
+    </header>
+
+    <div class="container-All">
+      <div class="container" id="add-book">
+        <h1>Pendataan Buku</h1>
+        <form id="tambahBuku" class="formBuku">
+          <div class="form-group">
+            <label for="judul">Judul Buku</label>
+            <input
+              type="text"
+              id="judul"
+              name="judul"
+              placeholder="Judul Buku"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="penulis">Penulis Buku</label>
+            <input
+              type="text"
+              id="penulis"
+              name="penulis"
+              placeholder="Penulis Buku"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="tahun">Tahun Terbit</label>
+            <input
+              type="number"
+              id="tahun"
+              name="tahun"
+              placeholder="Tahun Terbit"
+              required
+            />
+          </div>
+          <div class="form-check">
+            <input type="checkbox" name="isRead" id="isRead" />
+            <label for="isRead">Selesai Dibaca</label>
+          </div>
+          <button type="submit" class="btn-submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="container">
+        <h2>Buku Belum Selesai Dibaca..</h2>
+        <div id="unCompleted"></div>
+      </div>
+
+      <div class="container">
+        <h2>Buku Sudah Selesai Dibaca..</h2>
+        <div id="isCompleted"></div>
+      </div>
+
+      <div id="editModal" class="modal">
+        <div class="container">
+          <span class="close">&times;</span>
+          <h2>Edit Book</h2>
+          <div class="form-group">
+            <label for="newTitle">New Title:</label>
+            <input type="text" id="newTitle" />
+          </div>
+          <div class="form-group">
+            <label for="newAuthor">New Author:</label>
+            <input type="text" id="newAuthor" />
+          </div>
+          <div class="form-group">
+            <label for="newYear">New Year:</label>
+            <input type="number" id="newYear" />
+          </div>
+          <div class="form-check">
+            <label for="newRead">Is Read:</label>
+            <input type="checkbox" id="newRead" /><br />
+          </div>
+          <button id="saveEdit" class="btn-seacrh">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
